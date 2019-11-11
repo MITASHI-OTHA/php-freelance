@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<form style="display: ">
+		<input type="text" name="nom" placeholder="nom">
+		<input type="email" name="email" placeholder="email">
+		<select name="specialite">
+			<option value="Developpeur web">Developpeur web</option>
+			<option value="Developpeur mobile">Developpeur mobile</option>
+			<option value="Developpeur application">Developpeur app</option>
+			<option value="je ne suis pas Developpeur">rien</option>
+		</select>
+		<input type="password" name="password">
+		<input type="submit" name="" value="creer">
+	</form>
+</body>
+<script type="text/javascript">
+	$('form').on('submit', function(e){
+		e.preventDefault()
+		form = $(this).serialize()
+		$.ajax({
+			type: "POST",
+			url: 'post.php',
+			data: form,
+			dataType: 'json'
+		}).done(function(data){
+			console.log("data ", data)
+		}).fail(function(err){
+			console.log("erreur",  err)
+		})
+
+		
+	})
+</script>
+</html>

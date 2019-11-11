@@ -1,0 +1,24 @@
+.profil-image {
+    height: 200px;
+    width: 200px;
+}
+
+.infos-user {
+    color: #666;
+    padding: 2ex !important;
+    background: #e8e8ec !important;
+    margin-top: 7px !important;
+}
+
+.col-load {
+    display: grid;
+    text-align: center;
+    text-align: center;
+    background: #6666660f;
+    padding: 9px;
+    padding-bottom: 0;
+}
+
+.invisible {
+    display: none !important
+}
